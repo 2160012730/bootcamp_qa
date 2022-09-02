@@ -1,0 +1,15 @@
+[
+    {
+            "email" : "le290308@gmail.com",
+            "senha" : "290308Le"
+    },
+    {
+            "email" : "le290308@via.com",
+            "senha" : "290308Le"
+},
+{
+            "email" : "le290308@yahoo.com",
+            "senha" : "290308Le",
+            "perfil": "admin"
+}
+]

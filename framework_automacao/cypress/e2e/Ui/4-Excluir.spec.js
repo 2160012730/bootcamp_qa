@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
-describe('US0004 - Funcionalidade: Excluir', () => {
+describe('US004 - Funcionalidade: Excluir', () => {
 
-    //beforeEach{() => {
-     //   cy.visit('login')
+    //beforeEach(() => {
+       // cy.visit('login')
 
     it('Deve fazer login com sucesso', () => {
         cy.visit('login')
@@ -16,3 +16,4 @@ describe('US0004 - Funcionalidade: Excluir', () => {
 
     });
 });
+//});

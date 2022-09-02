@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('US003 - Funcionalidade: Criar Perfil', () => {
+describe('US003 - Funcionalidade: Criar perfil', () => {
     beforeEach(() => {
         cy.visit('login')
         cy.get('[data-test="login-email"] > .MuiInputBase-root > .MuiInputBase-input').type('le290308@gmail.com')

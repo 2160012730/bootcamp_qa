@@ -31,3 +31,22 @@ Cypress.Commands.add('navigate', (route) => {
     cy.visit(route, { timeout: 30000 })
     cy.wait('@loadpage')
 })
+Cypress.Commands.add("login", (email, senha) => {
+
+    cy.visit('login')
+    cy.get('[data-test="login-email"]').type(email)
+    cy.get('[data-test="login-password"]') .type(senha)
+    cy.get('[data-test="login-submit"]').click()
+})
+Cypress.Commands.add('criarPerfil', (cia, site, cidade, skills, github, minibio) => {
+    cy.visit('criarPerfil')
+    cy.get('#mui-component-select-status').click()
+    cy.contains('Especialista em QA').click()
+    cy.get('[data-test="profile-company"]').type(cia)
+    cy.get('[data-test="profile-webSite"]').type(site)
+    cy.get('[data-test="profile-location"]').type(cidade)
+    cy.get('[data-test="profile-skills"]').type(skills)
+    cy.get('[data-test="profile-gitHub"]').type(github)
+    cy.get('[data-test="profile-bio"]').type(minibio)
+
+});

@@ -1,10 +1,11 @@
 /// <reference types="cypress" />
+import usuarios from "../../fixtures/usuario.json"
 
 describe('US0001 - Funcionalidade: Login', () => {
-
-    //beforeEach{() => {
-     //   cy.visit('login')
-
+/*
+    beforeEach(() => {
+        cy.visit('login')
+*/
     it('Deve fazer login com sucesso', () => {
         cy.visit('login')
         cy.get('[data-test="login-email"] > .MuiInputBase-root > .MuiInputBase-input').type('le290308@gmail.com')
@@ -14,7 +15,18 @@ describe('US0001 - Funcionalidade: Login', () => {
 
 
     });
+    it('Deve fazer login com sucesso - Usando importação', () => {
+        cy.login(usuarios[0].email, usuarios[0].senha)
+        cy.title().should('eq', 'ConexaoQA')
+    });
+    it('Deve fazer login com sucesso - Usando fixture', () => {
+        cy.fixture("usuarios").then((user) => {
+            cy.login(user[1].email, user[1].senha)
+        })
+        cy.title().should('eq', 'ConexaoQA')
+    }); 
 });
+//});
 
 
 /*
