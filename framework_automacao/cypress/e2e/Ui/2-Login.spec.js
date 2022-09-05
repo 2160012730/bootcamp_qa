@@ -20,7 +20,7 @@ describe('US0001 - Funcionalidade: Login', () => {
         cy.title().should('eq', 'ConexaoQA')
     });
     it('Deve fazer login com sucesso - Usando fixture', () => {
-        cy.fixture("usuarios").then((user) => {
+        cy.fixture("usuario.json").then((user) => {
             cy.login(user[1].email, user[1].senha)
         })
         cy.title().should('eq', 'ConexaoQA')
