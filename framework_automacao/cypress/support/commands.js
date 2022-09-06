@@ -26,6 +26,11 @@
 
 /// <reference types="Cypress" />
 
+import auth from '../fixtures/auth.json'
+
+
+
+
 Cypress.Commands.add('navigate', (route) => {
     cy.intercept(route).as('loadpage')
     cy.visit(route, { timeout: 30000 })
@@ -50,3 +55,27 @@ Cypress.Commands.add('criarPerfil', (cia, site, cidade, skills, github, minibio)
     cy.get('[data-test="profile-bio"]').type(minibio)
 
 });
+
+Cypress.Commands.add("tokenJwt", () => {
+    cy.request({
+        method: 'POST',
+        url: '/api/auth',
+        body: auth
+    }).then((response) => {
+       return response.body.jwt
+    })
+})
+
+Cypress.Commands.add("criarPostagem", (token, value) => {
+    cy.request({
+        method: 'POST',
+        url: '/api/posts',
+        headers: {
+            Cookie: token
+        },
+        body: {
+            text: value
+        }
+    })
+    
+})
