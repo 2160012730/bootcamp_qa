@@ -79,3 +79,39 @@ Cypress.Commands.add("criarPostagem", (token, value) => {
     })
     
 })
+
+Cypress.Commands.add("criarPerfil", (token, value) => {
+    cy.request({
+        method: 'POST',
+        url: '/api/profile',
+        headers: {
+            Cookie: token
+        },
+        body: {
+            text: value
+        }
+    })
+    
+})
+
+Cypress.Commands.add("criarExperiencia", (token) => {
+    cy.request({
+        method: 'PUT',
+        url: '/api/profile/experience',
+        headers: {
+            Cookie: token
+        },
+        body: 
+            {
+                "title": "QA",
+                "company": "VIA",
+                "location": "SP",
+                "from": "2022-09-08",
+                "to": "2022-09-08",
+                "current": false,
+                "description": "Teste BOOTCAMP"
+              }
+        
+    })
+    
+})
