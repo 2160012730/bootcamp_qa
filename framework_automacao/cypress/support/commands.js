@@ -26,6 +26,21 @@
 
 /// <reference types="Cypress" />
 
+/*import user from "../../fixtures/usuario.json"
+
+Cypress.Commands.add("loginApp", () => {
+    cy.request({
+        method: 'POST',
+        url: 'api/auth',
+        body:
+        {
+            email: user[0].email,
+            password: user[0].senha
+        }
+        
+    })
+})*/
+
 import auth from '../fixtures/auth.json'
 
 

@@ -5,7 +5,7 @@ describe('US006 - Funcionalidade: Adicionar formação', () => {
 
     beforeEach(() => {
         cy.fixture("usuario.json").then((user) => {
-            cy.login(user[1].email, user[1].senha)
+            cy.login(user[0].email, user[0].senha)
         })
         cy.visit('adicionar-formacao')
     });
