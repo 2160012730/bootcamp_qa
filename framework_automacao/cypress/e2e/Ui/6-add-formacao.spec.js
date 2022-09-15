@@ -10,7 +10,7 @@ describe('US006 - Funcionalidade: Adicionar formação', () => {
         cy.visit('adicionar-formacao')
     });
 
-    it ('Deve adicionar uma formacao com sucesso', () => {
+    it('Deve adicionar uma formacao com sucesso', () => {
         formacaoPages.addExperiencia ('CLEMENTE', '2 GRAU', 'ENSINO FUNDAMENTAL', '01/01/1995', '31/12/1998', 'CURSO NORMAL')
         cy.get('[data-test="education-delete"]').should('exist')
 
@@ -22,7 +22,7 @@ describe('US006 - Funcionalidade: Adicionar formação', () => {
     });
 
     it('Deve excluir uma formacao com sucesso', () => {
-        formacaoPages.addExperiencia('CLEMENTE', '2 GRAU', 'ENSINO FUNDAMENTAL', '01/01/1995', '31/12/1998', 'CURSO NORMAL')
+        formacaoPages.addExperiencia ('CLEMENTE', '2 GRAU', 'ENSINO FUNDAMENTAL', '01/01/1995', '31/12/1998', 'CURSO NORMAL')
         cy.get('[data-test="education-delete"]').first().click()
        // cy.contains('Formacao Removida').should('be.visible')
     });

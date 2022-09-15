@@ -24,7 +24,7 @@ it('[POST] - Teste de autenticação com usuario invalido', () => {
         failOnStatusCode: false,
         body: {
             "email": "le300308@gmail.com",
-            "password": "290308"
+            "password": "290308Le"
         }
     }).then((response) => {
         expect(response.status).to.eq(401)

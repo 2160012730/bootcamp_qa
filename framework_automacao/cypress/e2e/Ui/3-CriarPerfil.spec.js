@@ -7,8 +7,6 @@ describe('US003 - Funcionalidade: Criar perfil', () => {
         cy.get('[data-test="login-password"] > .MuiInputBase-root > .MuiInputBase-input').type('290308Le')
         cy.get('[data-test="login-submit"]').click()
         cy.get('[data-test="dashboard-welcome"]').should('contain', 'Bem-vindo')
-
-        //cy.login('le290308@gmail.com', '290308Le')
         cy.get('[data-test="dashboard-createProfile"]').click()
     });
 it('Deve criar perfil com sucesso', () => {

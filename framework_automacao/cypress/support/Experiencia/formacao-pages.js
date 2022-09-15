@@ -9,9 +9,9 @@ class FormacaoPage {
     get #checkCursando() {return cy.get('[name="current"]')}
     
     addExperiencia(escola, grau, curso, dataInicio, dataFim, descricao){
-        this.#escola.type(escola, { delay: 1000})
-        this.#grau.type(grau, { delay: 1000})
-        this.#curso.type(curso, )
+        this.#escola.type(escola) //delay:1000
+        this.#grau.type(grau)
+        this.#curso.type(curso)
         this.#dataInicio.type(dataInicio)
         //this.#checkAtual.check()
         this.#dataFim.type(dataFim)
@@ -19,10 +19,10 @@ class FormacaoPage {
         this.#btnAdd.click()
 
     }
-    addExperienciaAtual(escola, grau, curso, dataInicio, descricao, btnAdd){
-        this.#escola.type(escola, { delay: 1000})
-        this.#grau.type(grau, { delay: 1000})
-        this.#curso.type(curso, )
+    addExperienciaAtual(escola, grau, curso, dataInicio, descricao){
+        this.#escola.type(escola)
+        this.#grau.type(grau)
+        this.#curso.type(curso)
         this.#dataInicio.type(dataInicio)
         this.#checkCursando.check()
        // this.#dataFim.type(dataFim)

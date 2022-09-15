@@ -19,12 +19,12 @@ describe('US0001 - Funcionalidade: Login', () => {
         cy.login(usuarios[0].email, usuarios[0].senha)
         cy.title().should('eq', 'ConexaoQA')
     });
-    it('Deve fazer login com sucesso - Usando fixture', () => {
+    /*it('Deve fazer login com sucesso - Usando fixture', () => {
         cy.fixture("usuario.json").then((user) => {
             cy.login(user[1].email, user[1].senha)
         })
         cy.title().should('eq', 'ConexaoQA')
-    }); 
+    }); */
 });
 //});
 
