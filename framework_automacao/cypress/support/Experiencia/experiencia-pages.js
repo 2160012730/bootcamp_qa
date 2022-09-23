@@ -9,8 +9,8 @@ class ExperienciaPage {
     get #checkAtual() {return cy.get('[name="current"]')}
     
     addExperiencia(posicao, empresa, local, dataInicio, dataFim, descricao){
-        this.#posicao.type(posicao, { delay: 1000})
-        this.#empresa.type(empresa, { delay: 1000})
+        this.#posicao.type(posicao) // , { delay: 1000}
+        this.#empresa.type(empresa) // , { delay: 1000}
         this.#local.type(local, )
         this.#dataInicio.type(dataInicio)
         //this.#checkAtual.check()
@@ -20,8 +20,8 @@ class ExperienciaPage {
 
     }
     addExperienciaAtual(posicao, empresa, local, dataInicio, descricao){
-        this.#posicao.type(posicao, { delay: 1000})
-        this.#empresa.type(empresa, { delay: 1000})
+        this.#posicao.type(posicao) //, { delay: 1000}
+        this.#empresa.type(empresa) //, { delay: 1000}
         this.#local.type(local, )
         this.#dataInicio.type(dataInicio)
         this.#checkAtual.check()
